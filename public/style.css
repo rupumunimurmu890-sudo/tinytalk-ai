@@ -1,0 +1,30 @@
+:root{--bg:#fff7e6;--ink:#2b2d42;--a:#ff9f1c;--b:#2ec4b6;--c:#e71d36;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#1d2233;--ink:#f6f2e8;--card:#2a3150}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:system-ui,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+header{display:flex;align-items:center;justify-content:space-between;padding:8px 12px}
+h1{font-size:1.3rem;margin:0}h2{margin:.3em 0}
+button{font:inherit;border:0;border-radius:20px;padding:14px 18px;min-height:56px;min-width:56px;background:var(--a);color:#fff;font-weight:700;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+button:active{transform:translateY(3px);box-shadow:none}
+button.b{background:var(--b)}button.c{background:var(--c)}
+header button{background:var(--card);color:var(--ink);font-size:1.5rem}
+main{padding:12px;max-width:640px;margin:auto;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:10px}
+.menu{display:grid;gap:14px;margin-top:12px}
+.menu button{font-size:1.4rem;padding:22px}
+.card{background:var(--card);border-radius:24px;padding:16px;margin:10px 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.big{font-size:7rem;line-height:1.1;cursor:pointer;display:inline-block}
+.pop{animation:pop .5s}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(-6deg)}100%{transform:scale(1)}}
+.bob{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.pop,.bob{animation:none}}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opts button{font-size:3rem;background:var(--card);color:var(--ink)}
+.opts button.ok{background:#8ce99a}
+.opts button.try{background:#ffe8a3}
+canvas{background:#fff;border-radius:20px;touch-action:none;width:100%;max-width:320px;border:3px dashed var(--b)}
+#off{background:#444;color:#fff;text-align:center;padding:4px;font-size:.9rem}
+footer{text-align:center;font-size:.8rem;opacity:.7;padding:16px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+input{font:inherit;padding:12px;border-radius:12px;border:2px solid var(--b);width:120px;text-align:center}
